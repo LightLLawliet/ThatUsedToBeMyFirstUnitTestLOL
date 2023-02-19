@@ -8,9 +8,11 @@ internal class CounterTest {
     @Test
 
     fun test() {
-        val numbers = Count.Base()
+        val a = (0..10).random()
+        val b = (0..10).random()
+        val numbers = Count.Base(a, b)
         val actual = numbers.sum()
-        val expected = 3
+        val expected = a + b
         assertEquals(actual, expected)
     }
 }

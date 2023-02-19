@@ -2,9 +2,9 @@ package com.example.clickcount
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.telecom.Call
 import android.widget.Button
 import android.widget.TextView
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +14,9 @@ class MainActivity : AppCompatActivity() {
         val text = findViewById<TextView>(R.id.counter)
 
         button.setOnClickListener {
-            text.text = Count.Base().sum().toString()
+            val a = (0..10).random()
+            val b = (0..10).random()
+            text.text = Count.Base(a, b).sum().toString()
         }
     }
 }

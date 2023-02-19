@@ -4,9 +4,7 @@ interface Count {
 
     fun sum(): Int
 
-    class Base : Count {
-        private val a: Int = 1
-        private val b: Int = 2
+    class Base(private val a: Int, private val b: Int) : Count {
         override fun sum(): Int {
             return a + b
         }
